@@ -5,6 +5,7 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import { activeLanguageData, languageData } from "@/constants/navbar";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,42 +13,6 @@ const Theme = () => {
   const [activeLanguage, setActiveLanguage] = useState("uz");
   const [t] = useTranslation("global");
   const { i18n } = useTranslation("global");
-
-  const languageData = [
-    {
-      value: "uz",
-      label: t("navbar.language.uzb"),
-      icon: "/assets/images/uz.png",
-    },
-    {
-      value: "ru",
-      label: t("navbar.language.ru"),
-      icon: "/assets/images/ru.png",
-    },
-    {
-      value: "eng",
-      label: t("navbar.language.eng"),
-      icon: "/assets/images/en.png",
-    },
-  ];
-
-  const activeLanguageData = [
-    {
-      src: "/assets/images/uz.png",
-      alt: "Uzb flag",
-      label: "uz",
-    },
-    {
-      src: "/assets/images/ru.png",
-      alt: "Ru flag",
-      label: "ru",
-    },
-    {
-      src: "/assets/images/en.png",
-      alt: "Eng flag",
-      label: "eng",
-    },
-  ];
 
   return (
     <Menubar className="relative border-none bg-transparent shadow-none">
@@ -60,8 +25,8 @@ const Theme = () => {
                   key={language.src}
                   src={language.src}
                   alt={language.alt}
-                  width={20}
-                  height={20}
+                  width={22}
+                  height={22}
                   loading="lazy"
                   decoding="async"
                 />
@@ -80,9 +45,16 @@ const Theme = () => {
                   i18n.changeLanguage(data.value);
                 }}
               >
-                <img src={data.icon} alt={data.label} width={20} height={20} />
+                <img
+                  src={data.icon}
+                  alt={data.label}
+                  width={22}
+                  height={22}
+                  loading="lazy"
+                  decoding="async"
+                />
                 <p className={`base-medium text-dark200_light800`}>
-                  {data.label}
+                  {t(data.label)}
                 </p>
               </MenubarItem>
             );

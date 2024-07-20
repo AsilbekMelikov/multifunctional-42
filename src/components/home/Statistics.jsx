@@ -1,22 +1,8 @@
+import { statisticsData } from "@/constants/statistics";
 import { useTranslation } from "react-i18next";
 
 const Statistics = () => {
   const [t] = useTranslation("global");
-
-  const statisticsData = [
-    {
-      label: t("statistics.cards.experience.term"),
-      data: t("statistics.cards.experience.data"),
-    },
-    {
-      label: t("statistics.cards.studentCount.term"),
-      data: t("statistics.cards.studentCount.data"),
-    },
-    {
-      label: t("statistics.cards.lessonCount.term"),
-      data: t("statistics.cards.lessonCount.data"),
-    },
-  ];
 
   return (
     <section id="statistics">
@@ -36,10 +22,10 @@ const Statistics = () => {
               className="background-light700_dark500 flex cursor-default flex-col gap-4 rounded-lg px-4  py-5 transition-all duration-200 hover:shadow-md"
             >
               <dt className="text-dark200_light800 paragraph-medium truncate">
-                {statistic.label}
+                {t(statistic.label)}
               </dt>
               <dd className="h3-semibold text-dark200_light800 mt-1">
-                {statistic.data}
+                {t(statistic.data)}
               </dd>
             </div>
           );

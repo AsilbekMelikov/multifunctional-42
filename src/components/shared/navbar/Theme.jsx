@@ -5,6 +5,7 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import { themeData } from "@/constants/navbar";
 import { ThemeContext } from "@/context/ThemeProvider";
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
@@ -12,24 +13,6 @@ import { useTranslation } from "react-i18next";
 const Theme = () => {
   const [t] = useTranslation("global");
   const { mode, setMode } = useContext(ThemeContext);
-
-  const themeData = [
-    {
-      value: "light",
-      label: t("navbar.mode.light"),
-      icon: "/assets/sun.svg",
-    },
-    {
-      value: "dark",
-      label: t("navbar.mode.dark"),
-      icon: "/assets/moon.svg",
-    },
-    {
-      value: "system",
-      label: t("navbar.mode.system"),
-      icon: "/assets/computer.svg",
-    },
-  ];
 
   return (
     <Menubar className="relative border-none bg-transparent shadow-none">
@@ -78,7 +61,7 @@ const Theme = () => {
                   height={20}
                 />
                 <p className={`base-medium text-dark200_light800`}>
-                  {theme.label}
+                  {t(theme.label)}
                 </p>
               </MenubarItem>
             );

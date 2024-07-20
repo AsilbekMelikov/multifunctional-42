@@ -5,82 +5,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { studentsData } from "@/constants/students";
 import Autoplay from "embla-carousel-autoplay";
 import { useTranslation } from "react-i18next";
 
 const Student = () => {
   const [t] = useTranslation("global");
-
-  const studentsData = [
-    {
-      studentImageUrl:
-        "https://42.uz/_next/image?url=%2Fstudents%2F1580794557770.jpeg&w=128&q=75",
-      studentImageSrcset:
-        "https://42.uz/_next/image?url=%2Fstudents%2F1580794557770.jpeg&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fstudents%2F1580794557770.jpeg&w=256&q=75 2x",
-      studentImageAlt: "Shukhrat Mirrakhimov",
-      studentName: t("students.cards.student1.name"),
-      studentPosition: t("students.cards.student1.position"),
-      companyImgUrl:
-        "https://42.uz/_next/image?url=%2Fcompanies%2Ftoptal.png&w=128&q=75",
-      companyImgSrcset:
-        "https://42.uz/_next/image?url=%2Fcompanies%2Ftoptal.png&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fcompanies%2Ftoptal.png&w=256&q=75 2x",
-      companyAlt: "TopTal brand",
-      comment: t("students.cards.student1.comment"),
-      linkedinLink:
-        "https://www.linkedin.com/posts/shux121995_internship-toptal-activity-6835889893911105536-Ojj1/?utm_source=share&utm_medium=member_desktop",
-    },
-    {
-      studentImageUrl:
-        "https://42.uz/_next/image?url=%2Fstudents%2F1652076819849.jpeg&w=128&q=75",
-      studentImageSrcset:
-        "https://42.uz/_next/image?url=%2Fstudents%2F1652076819849.jpeg&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fstudents%2F1652076819849.jpeg&w=256&q=75 2x",
-      studentImageAlt: "Mirvohid Azimov",
-      studentName: t("students.cards.student2.name"),
-      studentPosition: t("students.cards.student2.position"),
-      companyImgUrl:
-        "https://42.uz/_next/image?url=%2Fcompanies%2Fyandex.png&w=128&q=75",
-      companyImgSrcset:
-        'https://42.uz/_next/image?url=%2Fcompanies%2Fyandex.png&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fcompanies%2Fyandex.png&w=256&q=75 2x"',
-      companyAlt: "Yandex brand",
-      comment: t("students.cards.student2.comment"),
-      linkedinLink:
-        "https://www.linkedin.com/posts/ugcPost-7074797410685759488-77RB/?utm_source=share&utm_medium=member_desktop",
-    },
-    {
-      studentImageUrl:
-        "https://42.uz/_next/image?url=%2Fstudents%2F1688940135044.jpeg&w=256&q=75",
-      studentImageSrcset:
-        "https://42.uz/_next/image?url=%2Fstudents%2F1688940135044.jpeg&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fstudents%2F1688940135044.jpeg&w=256&q=75 2x",
-      studentImageAlt: "Begnazar Akhmadjonov",
-      studentName: t("students.cards.student3.name"),
-      studentPosition: t("students.cards.student3.position"),
-      companyImgUrl:
-        "https://42.uz/_next/image?url=%2Fcompanies%2Fericsson.png&w=128&q=75",
-      companyImgSrcset:
-        "https://42.uz/_next/image?url=%2Fcompanies%2Fericsson.png&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fcompanies%2Fericsson.png&w=256&q=75 2x",
-      companyAlt: "Ericsson brand",
-      comment: t("students.cards.student3.comment"),
-      linkedinLink:
-        "https://www.linkedin.com/posts/begnazarakh_bizyutdik-ericsson-activity-7079105208248598528-lQFc/?utm_source=share&utm_medium=member_desktop",
-    },
-    {
-      studentImageUrl:
-        "https://42.uz/_next/image?url=%2Fstudents%2F1688970568501.jpeg&w=128&q=75",
-      studentImageSrcset:
-        "https://42.uz/_next/image?url=%2Fstudents%2F1688970568501.jpeg&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fstudents%2F1688970568501.jpeg&w=256&q=75 2x",
-      studentImageAlt: "Javokhirbek Khaydaraliev",
-      studentName: t("students.cards.student4.name"),
-      studentPosition: t("students.cards.student4.position"),
-      companyImgUrl:
-        "https://42.uz/_next/image?url=%2Fcompanies%2Fgoogle.png&w=128&q=75",
-      companyImgSrcset:
-        'https://42.uz/_next/image?url=%2Fcompanies%2Fgoogle.png&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fcompanies%2Fgoogle.png&w=256&q=75 2x"',
-      companyAlt: "Google brand",
-      comment: t("students.cards.student4.comment"),
-      linkedinLink:
-        "https://www.linkedin.com/posts/javokhirbek-kh_coding-google-intern-activity-7038846041785307136-_APB/?utm_source=share&utm_medium=member_desktop",
-    },
-  ];
 
   return (
     <section id="students" className="pt-36">
@@ -127,10 +57,10 @@ const Student = () => {
                             />
                             <div className="flex flex-col text-left">
                               <h2 className="base-semibold text-dark-200">
-                                {data.studentName}
+                                {t(data.studentName)}
                               </h2>
                               <p className="flex flex-col items-start gap-2 md:flex-row md:items-center">
-                                <span>{data.studentPosition}</span>
+                                <span>{t(data.studentPosition)}</span>
                                 <img
                                   src={data.companyImgUrl}
                                   alt={data.companyAlt}
@@ -151,7 +81,7 @@ const Student = () => {
                       <div className="w-full cursor-default rounded-lg rounded-t-none border border-t-0 shadow-sm">
                         <div className="flex flex-col gap-2 p-6 pt-5 text-left">
                           <p className="base-regular text-dark200_light800">
-                            {data.comment}
+                            {t(data.comment)}
                           </p>
                           <div className="paragraph-semibold text-dark200_light800 flex flex-col items-start gap-1 md:flex-row md:items-center">
                             <span className="mr-2">5.0</span>

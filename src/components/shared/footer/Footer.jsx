@@ -1,60 +1,9 @@
+import { footerNavs, socialMediaInfo } from "@/constants/footer";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [t] = useTranslation("global");
-
-  const footerNavs = [
-    {
-      label: t("footer.items.home"),
-      path: "/team",
-    },
-    {
-      label: t("footer.items.courses"),
-      path: "/courses",
-    },
-    {
-      label: t("footer.items.podcast"),
-      path: "https://youtube.com/@qirikki",
-    },
-    {
-      label: t("footer.items.faq"),
-      path: "/faq",
-    },
-  ];
-
-  const socialMediaInfo = [
-    {
-      destination: "https://instagram.com/qirikki",
-      label: "Instagram",
-      image: "/assets/instagram.svg",
-      alt: "instagram",
-    },
-    {
-      destination: "https://t.me/qirikki",
-      label: "Telegram",
-      image: "/assets/telegram.svg",
-      alt: "telegram",
-    },
-    {
-      destination: "https://twitter.com/@qirikki",
-      label: "Twitter",
-      image: "/assets/twitter.svg",
-      alt: "twitter",
-    },
-    {
-      destination: "https://github.com/42uz",
-      label: "Github",
-      image: "/assets/github.svg",
-      alt: "github",
-    },
-    {
-      destination: "https://youtube.com/@qirikki",
-      label: "Youtube",
-      image: "/assets/youtube.svg",
-      alt: "youtube",
-    },
-  ];
 
   return (
     <footer
@@ -73,7 +22,7 @@ const Footer = () => {
                   to={nav.path}
                   className="inline-flex-center base-medium text-dark200_light800 h-10 px-4 py-2 underline-offset-4 hover:underline"
                 >
-                  {nav.label}
+                  {t(nav.label)}
                 </Link>
               </div>
             );

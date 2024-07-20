@@ -1,47 +1,9 @@
 import { useTranslation } from "react-i18next";
 import Button from "../shared/button/Button";
+import { featuresCards } from "@/constants/features";
 
 const Features = () => {
   const [t] = useTranslation("global");
-
-  const featuresCards = [
-    {
-      imageUrl: "https://42.uz/home/features/interactive.svg",
-      alt: "Interaction",
-      title: t("features.cards.interaction.title"),
-      description: t("features.cards.interaction.description"),
-    },
-    {
-      imageUrl: "https://42.uz/home/features/books.svg",
-      alt: "Books",
-      title: t("features.cards.books.title"),
-      description: t("features.cards.books.description"),
-    },
-    {
-      imageUrl: "https://42.uz/home/features/mix.svg",
-      alt: "Frontend and Backend",
-      title: t("features.cards.full.title"),
-      description: t("features.cards.full.description"),
-    },
-    {
-      imageUrl: "https://42.uz/home/features/backend.svg",
-      alt: "Backend",
-      title: t("features.cards.backend.title"),
-      description: t("features.cards.backend.description"),
-    },
-    {
-      imageUrl: "https://42.uz/home/features/frontend.svg",
-      alt: "Frontend",
-      title: t("features.cards.frontend.title"),
-      description: t("features.cards.frontend.description"),
-    },
-    {
-      imageUrl: "https://42.uz/home/features/mobile.svg",
-      alt: "Mobile",
-      title: t("features.cards.mobile.title"),
-      description: t("features.cards.mobile.description"),
-    },
-  ];
 
   return (
     <section
@@ -86,10 +48,10 @@ const Features = () => {
                 />
                 <div className="space-y-2">
                   <h5 className="base-bold text-dark200_light800">
-                    {feature.title}
+                    {t(feature.title)}
                   </h5>
                   <p className="base-medium text-light500_dark600">
-                    {feature.description}
+                    {t(feature.description)}
                   </p>
                 </div>
               </div>
