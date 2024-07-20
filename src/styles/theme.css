@@ -35,6 +35,10 @@
     @apply text-[30px] font-semibold leading-[36px];
   }
 
+  .h2-semibold-36 {
+    @apply text-[36px] font-semibold leading-[40px];
+  }
+
   .h2-semibold {
     @apply text-[60px] font-semibold leading-[60px];
   }

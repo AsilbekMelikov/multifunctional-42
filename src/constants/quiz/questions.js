@@ -1,0 +1,147 @@
+export const questions = [
+  {
+    numb: 1,
+    question: "What does HTML stand for?",
+    answer: "Hyper Text Markup Language",
+    options: [
+      "Hyper Text Preprocessor",
+      "Hyper Text Markup Language",
+      "Hyper Text Multiple Language",
+      "Hyper Tool Multi Language",
+    ],
+  },
+  {
+    numb: 2,
+    question: "What does CSS stand for?",
+    answer: "Cascading Style Sheets",
+    options: [
+      "Common Style Sheets",
+      "Colorful Style Sheets",
+      "Computer Style Sheets",
+      "Cascading Style Sheets",
+    ],
+  },
+  {
+    numb: 3,
+    question: "What does React primarily use to manage state?",
+    answer: "Hooks",
+    options: ["Components", "Props", "State", "Hooks"],
+  },
+  {
+    numb: 4,
+    question: "What is the purpose of the virtual DOM in React?",
+    answer: "To improve performance",
+    options: [
+      "To manage CSS styles",
+      "To directly manipulate the real DOM",
+      "To improve performance",
+      "To handle HTTP requests",
+    ],
+  },
+  {
+    numb: 5,
+    question: "What does SQL stand for?",
+    answer: "Structured Query Language",
+    options: [
+      "Stylish Question Language",
+      "Stylesheet Query Language",
+      "Statement Question Language",
+      "Structured Query Language",
+    ],
+  },
+  {
+    numb: 6,
+    question: "Which of the following is a NoSQL database?",
+    answer: "MongoDB",
+    options: ["MySQL", "PostgreSQL", "MongoDB", "Oracle"],
+  },
+  {
+    numb: 7,
+    question: "What does REST stand for in RESTful API?",
+    answer: "Representational State Transfer",
+    options: [
+      "Representational State Transfer",
+      "Reusable Software Techniques",
+      "Remote Server Testing",
+      "Representational Software Transaction",
+    ],
+  },
+  {
+    numb: 8,
+    question: "Which of the following is a backend framework for Node.js?",
+    answer: "Express.js",
+    options: ["React.js", "Angular", "Vue.js", "Express.js"],
+  },
+  {
+    numb: 9,
+    question: "What does JWT stand for?",
+    answer: "JSON Web Token",
+    options: [
+      "Java Web Token",
+      "JavaScript Web Token",
+      "JSON Web Token",
+      "JavaScript Web Type",
+    ],
+  },
+  {
+    numb: 10,
+    question: "What is the command to install a package using npm?",
+    answer: "npm install package-name",
+    options: [
+      "npm get package-name",
+      "npm fetch package-name",
+      "npm install package-name",
+      "npm download package-name",
+    ],
+  },
+  {
+    numb: 11,
+    question: "What does XML stand for?",
+    answer: "eXtensible Markup Language",
+    options: [
+      "eXtensible Markup Language",
+      "eXecutable Multiple Language",
+      "eXTra Multi-Program Language",
+      "eXamine Multiple Language",
+    ],
+  },
+  {
+    numb: 12,
+    question: "What is the use of useEffect in React?",
+    answer: "To perform side effects in function components",
+    options: [
+      "To manage state in function components",
+      "To handle HTTP requests",
+      "To create components",
+      "To perform side effects in function components",
+    ],
+  },
+  {
+    numb: 13,
+    question: "Which HTTP method is used to update data on a server?",
+    answer: "PUT",
+    options: ["GET", "POST", "PUT", "DELETE"],
+  },
+  {
+    numb: 14,
+    question: "What does CRUD stand for in database operations?",
+    answer: "Create, Read, Update, Delete",
+    options: [
+      "Create, Read, Upload, Download",
+      "Create, Read, Update, Delete",
+      "Create, Run, Update, Delete",
+      "Create, Retrieve, Update, Delete",
+    ],
+  },
+  {
+    numb: 15,
+    question: "What does PHP stand for?",
+    answer: "Hypertext Preprocessor",
+    options: [
+      "Hypertext Preprocessor",
+      "Hypertext Programming",
+      "Hypertext Preprogramming",
+      "Hometext Preprocessor",
+    ],
+  },
+];

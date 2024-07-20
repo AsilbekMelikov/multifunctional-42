@@ -135,5 +135,30 @@
         }
       ]
     }
+  ],
+  "my-courses": [
+    {
+      "id": "4af92459-b4af-46f8-93ae-f7628df26bb7",
+      "imageUrl": "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.…2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=384&q=75",
+      "imageSrcset": "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=384&q=75 1x, https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75 2x",
+      "imageAlt": "Express Backend",
+      "title": "Express Backend",
+      "mentor": "Azimjon Pulatov",
+      "lessonCount": "32",
+      "courseUsers": [
+        {
+          "job": "Kiberxavfsizlik sohasiga qiziquvchilar",
+          "description": "Kiberxavfsizlik sohasiga qiziquvchilar uchun ilk qadam"
+        },
+        {
+          "job": "Boʻlajak pentesterlar",
+          "description": "Noldan boshlab pentester boʻlib ishlashni xohlovchilar uchun boshlangʻich bilimlar jamlanmasi"
+        },
+        {
+          "job": "Kali Linux",
+          "description": "Kali Linux bilan tanishuv"
+        }
+      ]
+    }
   ]
 }

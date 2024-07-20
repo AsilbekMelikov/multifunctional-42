@@ -4,9 +4,15 @@ import Theme from "./Theme";
 import { useTranslation } from "react-i18next";
 import Translation from "./Translation";
 import { navigationLinks } from "@/constants/navbar";
+import { SignedIn, SignedOut, useAuth, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () => {
   const pathname = useLocation().pathname;
+  const { isSignedIn } = useAuth();
+
+  const navLinks = isSignedIn
+    ? [...navigationLinks, { label: "Mening kurslarim", path: "my-courses" }]
+    : navigationLinks;
 
   const [t] = useTranslation("global");
 
@@ -26,7 +32,7 @@ const Navbar = () => {
             </Link>
           </div>
           <ul className="flex gap-1">
-            {navigationLinks.map((link) => {
+            {navLinks.map((link) => {
               return (
                 <Link
                   key={link.path}
@@ -39,19 +45,35 @@ const Navbar = () => {
             })}
           </ul>
           <div className="flex items-center gap-3">
-            <Link
-              to={"/"}
-              className="btn base-medium text-light800_dark300 inline-flex-center h-11 rounded-md px-8 transition-all duration-200 ease-in-out hover:bg-opacity-90"
-            >
-              <img
-                src="/assets/lightning.svg"
-                alt="lightning"
-                className="mr-2 size-4 dark:invert-[0.9]"
-              />
-              {t("navbar.button.name")}
-            </Link>
+            <SignedOut>
+              <Link
+                to={"/sign-up"}
+                className="btn base-medium text-light800_dark300 inline-flex-center h-11 rounded-md px-8 transition-all duration-200 ease-in-out hover:bg-opacity-90"
+              >
+                <img
+                  src="/assets/lightning.svg"
+                  alt="lightning"
+                  className="mr-2 size-4 dark:invert-[0.9]"
+                />
+                {t("navbar.button.name")}
+              </Link>
+            </SignedOut>
+
             <Theme />
             <Translation />
+            <SignedIn>
+              <UserButton
+                afterSwitchSessionUrl="/"
+                appearance={{
+                  elements: {
+                    avatarBox: "h-10 w-10",
+                  },
+                  variables: {
+                    colorPrimary: "#ff7000",
+                  },
+                }}
+              ></UserButton>
+            </SignedIn>
           </div>
         </nav>
       </div>

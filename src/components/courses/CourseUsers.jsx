@@ -1,20 +1,4 @@
-import useFetch from "@/hooks/useFetch";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-
-const CourseUsers = () => {
-  const { id } = useParams();
-
-  const [separateCourseData, setSeperateCourseData] = useState([]);
-
-  const { request } = useFetch();
-
-  useEffect(() => {
-    request(`http://localhost:3001/courses/${id}`)
-      .then((data) => setSeperateCourseData(data))
-      .catch((error) => console.log(error));
-  }, []);
-
+const CourseUsers = ({ separateCourseData }) => {
   return (
     <section className="pt-20">
       <div>
