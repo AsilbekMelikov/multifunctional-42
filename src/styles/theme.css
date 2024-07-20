@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .background-light900_dark500 {
+    @apply bg-light-900 dark:bg-dark-500;
+  }
+
+  .background-light700_dark500 {
+    @apply bg-light-700 dark:bg-dark-500;
+  }
+
+  .background-light900_dark500 {
+    @apply bg-light-900 dark:bg-dark-500;
+  }
+
+  .text-dark200_light800 {
+    @apply text-dark-200 dark:text-light-800;
+  }
+
+  .text-light800_dark300 {
+    @apply text-light-800 dark:text-dark-300;
+  }
+
+  .text-light500_dark600 {
+    @apply text-light-500 dark:text-dark-600;
+  }
+
+  .h1-bold {
+    @apply text-[72px] font-bold leading-[72px];
+  }
+
+  .h2-semibold {
+    @apply text-[60px] font-semibold leading-[60px];
+  }
+
+  .h3-semibold {
+    @apply text-[48px] font-semibold leading-[48px] tracking-[-1.2px];
+  }
+
+  .h3-semibold-24 {
+    @apply text-[24px] font-semibold leading-6 tracking-[-0.6px];
+  }
+
+  .base-bold {
+    @apply text-[16px] font-bold leading-6;
+  }
+
+  .base-semibold {
+    @apply text-[20px] font-semibold leading-7;
+  }
+
+  .base-medium {
+    @apply text-[14px] font-medium leading-5;
+  }
+
+  .base-regular {
+    @apply text-[16px] font-normal leading-6;
+  }
+
+  .paragraph-semibold {
+    @apply text-[18px] font-semibold leading-[28px];
+  }
+
+  .paragraph-medium {
+    @apply text-[20px] font-medium leading-7;
+  }
+
+  .paragraph-medium-18 {
+    @apply text-[18px] font-medium leading-7;
+  }
+
+  .small-regular {
+    @apply text-[12px] font-normal leading-5;
+  }
+
+  .light-border {
+    @apply border-light-600 dark:border-dark-500;
+  }
+}
