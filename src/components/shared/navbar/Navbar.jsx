@@ -31,7 +31,7 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`base-medium inline-flex-center h-10 ${pathname === link.path ? "bg-light-700 text-dark-200" : "text-dark200_light800 bg-transparent"} rounded-md px-4 py-2`}
+                  className={`base-medium inline-flex-center h-10 ${pathname === link.path || (pathname.includes(link.path) && link.path.length > 1) ? "bg-light-700 text-dark-200" : "text-dark200_light800 bg-transparent"} rounded-md px-4 py-2`}
                 >
                   {t(link.label)}
                 </Link>

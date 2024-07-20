@@ -31,8 +31,8 @@ const Button = ({
 };
 
 Button.propTypes = {
-  navigation: PropTypes.string.isRequired, // Define the shape of navigation if possible
-  alt: PropTypes.string.isRequired,
+  navigation: PropTypes.string, // Define the shape of navigation if possible
+  alt: PropTypes.string,
   className: PropTypes.string,
   notlightning: PropTypes.bool,
   children: PropTypes.node.isRequired, // Example of another prop

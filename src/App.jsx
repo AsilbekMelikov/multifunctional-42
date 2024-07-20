@@ -7,6 +7,8 @@ import i18next from "i18next";
 import globalEng from "./translations/eng/global.json";
 import globalRu from "./translations/ru/global.json";
 import globalUzb from "./translations/uzb/global.json";
+import Courses from "./pages/courses/Courses";
+import CourseProfile from "./pages/courses/CourseProfile";
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -29,9 +31,15 @@ function App() {
     <I18nextProvider i18n={i18next}>
       <div className="background-light900_dark200 pt-20">
         <Navbar />
-        <Routes>
-          <Route path={"/"} element={<Home />} />
-        </Routes>
+        <div className="container min-h-[60vh] w-full max-w-[1304px] px-5">
+          <main className="flex flex-col gap-4 pt-9">
+            <Routes>
+              <Route path={"/"} element={<Home />} />
+              <Route path={"/courses"} element={<Courses />} />
+              <Route path={"/courses/:id"} element={<CourseProfile />} />
+            </Routes>
+          </main>
+        </div>
         <Footer />
       </div>
     </I18nextProvider>

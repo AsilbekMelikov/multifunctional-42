@@ -31,6 +31,10 @@
     @apply text-[72px] font-semibold leading-[72px];
   }
 
+  .h2-semibold-30 {
+    @apply text-[30px] font-semibold leading-[36px];
+  }
+
   .h2-semibold {
     @apply text-[60px] font-semibold leading-[60px];
   }
@@ -69,6 +73,10 @@
 
   .paragraph-medium-18 {
     @apply text-[18px] font-medium leading-7;
+  }
+
+  .paragraph-medium-16 {
+    @apply text-[16px] font-medium leading-6;
   }
 
   .small-regular {
