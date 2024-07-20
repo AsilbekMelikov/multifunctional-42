@@ -94,10 +94,10 @@ const Footer = () => {
             );
           })}
         </div>
-        <p className="mt-10 text-center text-[12px] leading-5 text-dark-200/60">
+        <p className="mt-10 text-center text-[12px] leading-5 text-dark-200/60 dark:text-white">
           © 2023 QIRIKKI LLC. Barcha huquqlar himoyalangan.
         </p>
-        <div className="flex-center gap-2 text-[12px] text-dark-200/80">
+        <div className="flex-center gap-2 text-[12px] text-dark-200/80 dark:text-white/70">
           Terms and Conditions Privacy Policy
         </div>
       </div>

@@ -4,7 +4,7 @@ const FAQ = () => {
   return (
     <section id="inquiries" className="flex flex-col gap-12 p-8 pb-0 md:pt-24">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-        <h2 className="h2-semibold text-dark300_light800">
+        <h2 className="h2-semibold text-dark200_light800">
           Sizni qiziqtira oldikmi?
         </h2>
         <p className="paragraph-medium-18 text-light500_dark600 max-w-5xl">
@@ -18,7 +18,7 @@ const FAQ = () => {
           <span className="light-border border-l"></span>
           <Button
             notlightning={true}
-            className="base-medium inline-flex-center light-border text-dark200_light800 h-10 rounded-md border px-4 py-2 transition-all duration-200 hover:bg-light-700"
+            className="base-medium inline-flex-center light-border text-dark200_light800 h-10 rounded-md border px-4 py-2 transition-all duration-200 hover:bg-light-700 dark:hover:bg-dark-500"
           >
             Savolingiz bormi?
           </Button>
@@ -30,7 +30,7 @@ const FAQ = () => {
           decoding="async"
           width={620}
           height={200}
-          className="mx-auto w-full md:w-3/5"
+          className="mx-auto w-full dark:invert-[0.9] md:w-3/5"
         />
       </div>
     </section>

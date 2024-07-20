@@ -115,7 +115,7 @@ const Student = () => {
                   >
                     <div className="px-2">
                       <div className="rounded-lg rounded-b-none border border-none shadow-sm">
-                        <div className="background-light700_dark500 flex flex-col items-start gap-2 rounded-b-none rounded-t-lg border p-6 pt-5">
+                        <div className="flex flex-col items-start gap-2 rounded-b-none rounded-t-lg border bg-light-700 p-6 pt-5 dark:bg-light-500">
                           <div className="flex items-center gap-4">
                             <img
                               src={data.studentImageUrl}
@@ -155,7 +155,7 @@ const Student = () => {
                           <p className="base-regular text-dark200_light800">
                             {data.comment}
                           </p>
-                          <div className="paragraph-semibold flex flex-col items-start gap-1 md:flex-row md:items-center">
+                          <div className="paragraph-semibold text-dark200_light800 flex flex-col items-start gap-1 md:flex-row md:items-center">
                             <span className="mr-2">5.0</span>
                             <div className="flex items-center gap-1">
                               {[1, 2, 3, 4, 5].map((_, index) => (
@@ -185,7 +185,7 @@ const Student = () => {
                                 alt="send icon"
                                 loading={"lazy"}
                                 decoding="async"
-                                className="size-4"
+                                className="size-4 dark:invert-[1]"
                               />
                             </a>
                           </div>

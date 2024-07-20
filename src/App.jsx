@@ -5,7 +5,7 @@ import Footer from "./components/shared/footer/Footer";
 
 function App() {
   return (
-    <div className="pt-20">
+    <div className="background-light900_dark200 pt-20">
       <Navbar />
       <Routes>
         <Route path={"/"} element={<Home />} />

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer utilities {
-  .background-light900_dark500 {
-    @apply bg-light-900 dark:bg-dark-500;
+  .background-light900_dark200 {
+    @apply bg-light-900 dark:bg-dark-200;
   }
 
   .background-light700_dark500 {
@@ -27,8 +27,8 @@
     @apply text-light-500 dark:text-dark-600;
   }
 
-  .h1-bold {
-    @apply text-[72px] font-bold leading-[72px];
+  .h1-semibold {
+    @apply text-[72px] font-semibold leading-[72px];
   }
 
   .h2-semibold {
