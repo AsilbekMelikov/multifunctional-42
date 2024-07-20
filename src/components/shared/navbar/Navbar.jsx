@@ -1,33 +1,37 @@
 // import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Theme from "./Theme";
+import { useTranslation } from "react-i18next";
+import Translation from "./Translation";
 
 const Navbar = () => {
   const pathname = useLocation().pathname;
 
+  const [t] = useTranslation("global");
+
   const navigationLinks = [
     {
-      label: "Bosh sahifa",
+      label: t("navbar.items.home"),
       path: "/",
     },
     {
-      label: "Kurslar",
+      label: t("navbar.items.courses"),
       path: "/courses",
     },
     {
-      label: "Taklifimiz",
+      label: t("navbar.items.suggestions"),
       path: "/suggestions",
     },
     {
-      label: "Jamoa",
-      path: "/group",
+      label: t("navbar.items.group"),
+      path: "/team",
     },
     {
-      label: "O'quvchilar",
+      label: t("navbar.items.students"),
       path: "/students",
     },
     {
-      label: "FAQ",
+      label: t("navbar.items.faq"),
       path: "/faq",
     },
   ];
@@ -60,7 +64,7 @@ const Navbar = () => {
               );
             })}
           </ul>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <Link
               to={"/"}
               className="btn base-medium text-light800_dark300 inline-flex-center h-11 rounded-md px-8 transition-all duration-200 ease-in-out hover:bg-opacity-90"
@@ -70,9 +74,10 @@ const Navbar = () => {
                 alt="lightning"
                 className="mr-2 size-4 dark:invert-[0.9]"
               />
-              Kirish
+              {t("navbar.button.name")}
             </Link>
             <Theme />
+            <Translation />
           </div>
         </nav>
       </div>

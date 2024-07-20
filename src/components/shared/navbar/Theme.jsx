@@ -7,22 +7,28 @@ import {
 } from "@/components/ui/menubar";
 import { ThemeContext } from "@/context/ThemeProvider";
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 
 const Theme = () => {
+  const [t] = useTranslation("global");
   const { mode, setMode } = useContext(ThemeContext);
 
   const themeData = [
     {
       value: "light",
-      label: "Light",
+      label: t("navbar.mode.light"),
       icon: "/assets/sun.svg",
     },
     {
       value: "dark",
-      label: "Moon",
+      label: t("navbar.mode.dark"),
       icon: "/assets/moon.svg",
     },
-    { value: "system", label: "System", icon: "/assets/computer.svg" },
+    {
+      value: "system",
+      label: t("navbar.mode.system"),
+      icon: "/assets/computer.svg",
+    },
   ];
 
   return (
@@ -54,7 +60,7 @@ const Theme = () => {
             return (
               <MenubarItem
                 key={theme.value}
-                className={`${mode === theme.value && "bg-light-700 dark:bg-dark-500"} flex items-center gap-4 rounded-md px-2.5 py-2`}
+                className={`${mode === theme.value && "bg-light-700 dark:bg-dark-500"} flex items-center gap-3 rounded-md px-2.5 py-2`}
                 onClick={() => {
                   setMode(theme.value);
 

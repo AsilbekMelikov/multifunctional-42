@@ -1,0 +1,156 @@
+{
+  "navbar": {
+    "items": {
+      "home": "Bosh sahifa",
+      "courses": "Kurslar",
+      "suggestions": "Taklifimiz",
+      "group": "Jamoa",
+      "students": "O'quvchilar",
+      "faq": "FAQ"
+    },
+    "button": {
+      "name": "Kirish"
+    },
+    "mode": {
+      "light": "Yorqin",
+      "dark": "Tungi",
+      "system": "Avtomatik"
+    },
+    "language": {
+      "uzb": "Uzb",
+      "ru": "Ru",
+      "eng": "Eng"
+    }
+  },
+
+  "mainContent": {
+    "title1": "42 kunda",
+    "title2": "backend",
+    "title3": "dasturlashni o'rganing",
+    "paragraph": "42 kun o'z ustingizda ishlang va kelajagingiz sari yo'l toping!",
+    "button": "Ishtirok etish"
+  },
+
+  "features": {
+    "title": "Sizni nima kutmoqda?",
+    "paragraph": "Interaktiv dasturlashni o&apos;rganish orqali proffessionallardan dasturlash asoslarini 42 kun ichida o'rganing!",
+    "cards": {
+      "interaction": {
+        "title": "Interaktiv darslar",
+        "description": "O'zingizga qulay vaqtingizda dasturlashni o'rganing"
+      },
+      "books": {
+        "title": "Yuqori sifatdagi darslar",
+        "description": " Qiziqarli darslarni 42 kun mobaynida o'rganing"
+      },
+      "full": {
+        "title": "Kross o'rganish imkoniyati",
+        "description": "42 kun ichida 3 yo'nalishda dasturlash asoslarini o'rganing"
+      },
+      "backend": {
+        "title": "Backend asoslari",
+        "description": "Backend asoslari bilan tanishing"
+      },
+      "frontend": {
+        "title": "Frontend asoslari",
+        "description": "Frontend asoslari bilan tanishing"
+      },
+      "mobile": {
+        "title": "Mobil dasturlash asoslari",
+        "description": "Mobil dasturlash asoslari bilan tanishing"
+      }
+    },
+    "subParagraph": "42 kundan so&apos;ng siz dasturlash asoslari bilan tanishasiz va 3 yo'nalishdan birini tanlaysiz!",
+    "button": "Ishtirok etish"
+  },
+
+  "statistics": {
+    "title": "Shu kunga qadar",
+    "paragraph": "Bizning maqsadimiz - o'quvchilarni IT sohasida professional mutaxassislar bo'lishiga yordam berish.",
+    "cards": {
+      "experience": {
+        "term": "O'rtacha jamoaviy tajriba",
+        "data": "+5 yil"
+      },
+      "studentCount": {
+        "term": "Umumiy o'quvchilar soni",
+        "data": "+6,379"
+      },
+      "lessonCount": {
+        "term": "O'rtacha jamoaviy tajriba",
+        "data": "+272"
+      }
+    }
+  },
+
+  "group": {
+    "title": "Jamoa",
+    "paragraph": "Xalqaro tajribaga ega mutaxassislar bilan birga dasturlashni o'rganing",
+    "cards": {
+      "person1": {
+        "name": "Azimjon Po'latov",
+        "position": "Software Engineer @ Google, Ex-Amazon, Ex-Facebook"
+      },
+      "person2": {
+        "name": "Muhammadyusuf Abdullaev",
+        "position": "Ex-Senior Android Developer @ CAFU, Noon & Super Unlimited Inc."
+      },
+      "person3": {
+        "name": "Mukhammadyusuf Abdurakhimov",
+        "position": "Ex-Software Engineer @ EPAM Systems & Ex-CTO & Optochka Inc."
+      },
+      "person4": {
+        "name": "Muhammadyusuf Saliev",
+        "position": "Infrastructure Engineering Intern at Toptal & Ex-Proxima"
+      }
+    }
+  },
+
+  "students": {
+    "title": "Bizning o'quvchilar",
+    "paragraph": "O'quvchilarimiz nima deydi va ularning natijalari bilan tanishing.",
+    "linkedin": "on LinkedIn",
+    "cards": {
+      "student1": {
+        "name": "Shukhrat Mirrakhimov",
+        "position": "Backend Developer Intern @",
+        "comment": "I am delighted to announce that I will be joining TopTal as a Back-end Engineering Intern. I would like to thank my recruiter Silvana Palacios and Azimjon Pulatov for supporting me through the whole i..."
+      },
+      "student2": {
+        "name": "Mirvohid Azimov",
+        "position": "Software Engineer Intern @",
+        "comment": "I'm starting a new position as a Software Engineer Intern at Yandex! Also, my special thanks to Azimjon Pulatov and all YBKY team members for creating a pleasant community to enjoy coding!"
+      },
+      "student3": {
+        "name": "Begnazar Akhmadjonov",
+        "position": "Student Developer @",
+        "comment": "I am thrilled to announce that I have embarked on a new journey as a Student Developer at Ericsson. Additionally, I am immensely grateful to Azimjon Pulatov and Mukhammadyusuf S. for providing me wit..."
+      },
+      "student4": {
+        "name": "Javokhirbek Khaydaraliev",
+        "position": "STEP Intern",
+        "comment": "I'm so excited to announce that I will be joining Google Assistant team at Google Zürich as a STEP Intern this summer.I have always been so curious about working at Google and now I am super excited"
+      }
+    }
+  },
+
+  "faq": {
+    "title": "Sizni qiziqtira oldikmi?",
+    "paragraph": "Xalqaro tajribaga ega mutaxassislar bilan birga dasturlashni o'rganishni boshlang!",
+    "button1": "Ishtirok etish",
+    "button2": "Savolingiz bormi?"
+  },
+
+  "footer": {
+    "items": {
+      "home": "Bosh sahifa",
+      "courses": "Kurslar",
+      "podcast": "42Podkast",
+      "group": "Jamoa",
+      "students": "O'quvchilar",
+      "faq": "FAQ"
+    },
+    "protection": "© 2023 QIRIKKI LLC. Barcha huquqlar himoyalangan.",
+    "policy": "Foydalanish shartlari Maxfiylik siyosati"
+  }
+}

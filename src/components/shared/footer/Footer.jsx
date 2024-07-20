@@ -1,21 +1,24 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [t] = useTranslation("global");
+
   const footerNavs = [
     {
-      label: "Biz haqimizda",
+      label: t("footer.items.home"),
       path: "/team",
     },
     {
-      label: "Kurslar",
-      path: "courses",
+      label: t("footer.items.courses"),
+      path: "/courses",
     },
     {
-      label: "42Podcast",
+      label: t("footer.items.podcast"),
       path: "https://youtube.com/@qirikki",
     },
     {
-      label: "FAQ",
+      label: t("footer.items.faq"),
       path: "/faq",
     },
   ];
@@ -95,10 +98,10 @@ const Footer = () => {
           })}
         </div>
         <p className="mt-10 text-center text-[12px] leading-5 text-dark-200/60 dark:text-white">
-          © 2023 QIRIKKI LLC. Barcha huquqlar himoyalangan.
+          {t("footer.protection")}
         </p>
         <div className="flex-center gap-2 text-[12px] text-dark-200/80 dark:text-white/70">
-          Terms and Conditions Privacy Policy
+          {t("footer.policy")}
         </div>
       </div>
     </footer>

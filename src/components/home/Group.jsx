@@ -1,12 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 const Group = () => {
+  const [t] = useTranslation("global");
+
   const groupCardsData = [
     {
       memberImage:
         "https://42.uz/_next/image?url=%2Fauthors%2Fazimjon.jpg&w=128&q=75",
       memberImageAlt: "Azimjon Po'latov",
-      memberName: "Azimjon Po'latov",
+      memberName: t("group.cards.person1.name"),
       linkedinProfileLink: "https://www.linkedin.com/in/azimjon-pulatov",
-      memberPosition: "Software Engineer @ Google, Ex-Amazon, Ex-Facebook",
+      memberPosition: t("group.cards.person1.position"),
       pastCompanyImages: [
         {
           src: "https://42.uz/_next/image?url=%2Fcompanies%2Fgoogle.png&w=128&q=75",
@@ -26,10 +30,9 @@ const Group = () => {
       memberImage:
         "https://42.uz/_next/image?url=%2Fauthors%2Fyusuf-mobile.jpg&w=128&q=75",
       memberImageAlt: "Muhammadyusuf Abdullaev",
-      memberName: "Muhammadyusuf Abdullaev",
+      memberName: t("group.cards.person2.name"),
       linkedinProfileLink: "https://www.linkedin.com/in/yusuf-abdullaev",
-      memberPosition:
-        "Ex-Senior Android Developer @ CAFU, Noon & Super Unlimited Inc.",
+      memberPosition: t("group.cards.person2.position"),
       pastCompanyImages: [
         {
           src: "https://42.uz/_next/image?url=%2Fcompanies%2Fcafu.png&w=128&q=75",
@@ -45,10 +48,9 @@ const Group = () => {
       memberImage:
         "https://42.uz/_next/image?url=%2Fauthors%2Fyusuf-front.jpg&w=128&q=75",
       memberImageAlt: "Mukhammadyusuf Abdurakhimov",
-      memberName: "Mukhammadyusuf Abdurakhimov",
+      memberName: t("group.cards.person3.name"),
       linkedinProfileLink: "https://www.linkedin.com/in/mrabdurakhimov",
-      memberPosition:
-        "Ex-Software Engineer @ EPAM Systems & Ex-CTO & Optochka Inc.",
+      memberPosition: t("group.cards.person3.position"),
       pastCompanyImages: [
         {
           src: "https://42.uz/_next/image?url=%2Fcompanies%2Fepam.png&w=128&q=75",
@@ -64,10 +66,9 @@ const Group = () => {
       memberImage:
         "https://42.uz/_next/image?url=%2Fauthors%2Fyusuf-devops.png&w=128&q=75",
       memberImageAlt: "Muhammadyusuf Saliev",
-      memberName: "Muhammadyusuf Saliev",
+      memberName: t("group.cards.person4.name"),
       linkedinProfileLink: "https://www.linkedin.com/in/muhammadyusuf-saliev",
-      memberPosition:
-        "Infrastructure Engineering Intern at Toptal & Ex-Proxima",
+      memberPosition: t("group.cards.person4.position"),
       pastCompanyImages: [
         {
           src: "https://42.uz/_next/image?url=%2Fcompanies%2Ftoptal.png&w=128&q=75",
@@ -88,10 +89,11 @@ const Group = () => {
   return (
     <section id="group" className="space-y-6 pt-36 dark:bg-transparent">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center ">
-        <h2 className="h2-semibold text-dark200_light800">Jamoa</h2>
+        <h2 className="h2-semibold text-dark200_light800">
+          {t("group.title")}
+        </h2>
         <p className="paragraph-medium-18 text-light500_dark600 max-w-[85%]">
-          Xalqaro tajribaga ega mutaxassislar bilan birga dasturlashni
-          o&apos;rganing
+          {t("group.paragraph")}
         </p>
       </div>
       <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">

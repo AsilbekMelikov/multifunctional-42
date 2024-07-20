@@ -1,0 +1,156 @@
+{
+  "navbar": {
+    "items": {
+      "home": "Home",
+      "courses": "Courses",
+      "suggestions": "Our Offer",
+      "group": "Team",
+      "students": "Students",
+      "faq": "FAQ"
+    },
+    "button": {
+      "name": "Login"
+    },
+    "mode": {
+      "light": "Bright",
+      "dark": "Dark",
+      "system": "Automatic"
+    },
+    "language": {
+      "uzb": "Uzb",
+      "ru": "Ru",
+      "eng": "Eng"
+    }
+  },
+
+  "mainContent": {
+    "title1": "In 42 days",
+    "title2": "backend",
+    "title3": "Learn programming",
+    "paragraph": "Work on yourself for 42 days and find your path to the future!",
+    "button": "Participate"
+  },
+
+  "features": {
+    "title": "What awaits you?",
+    "paragraph": "Learn the basics of programming from professionals in 42 days through interactive learning!",
+    "cards": {
+      "interaction": {
+        "title": "Interactive lessons",
+        "description": "Learn programming at your convenience"
+      },
+      "books": {
+        "title": "High-quality lessons",
+        "description": "Study interesting lessons over 42 days"
+      },
+      "full": {
+        "title": "Cross-learning opportunity",
+        "description": "Learn the basics of programming in three directions in 42 days"
+      },
+      "backend": {
+        "title": "Backend Basics",
+        "description": "Get acquainted with the basics of Backend"
+      },
+      "frontend": {
+        "title": "Frontend Basics",
+        "description": "Get acquainted with the basics of Frontend"
+      },
+      "mobile": {
+        "title": "Mobile Development Basics",
+        "description": "Get acquainted with the basics of mobile development"
+      }
+    },
+    "subParagraph": "After 42 days, you will get acquainted with the basics of programming and will be able to choose one of three directions!",
+    "button": "Participate"
+  },
+
+  "statistics": {
+    "title": "Until now",
+    "paragraph": "Our goal is to help students become professional specialists in the IT field.",
+    "cards": {
+      "experience": {
+        "term": "Average team experience",
+        "data": "+5 years"
+      },
+      "studentCount": {
+        "term": "Total number of students",
+        "data": "+6,379"
+      },
+      "lessonCount": {
+        "term": "Average team experience",
+        "data": "+272"
+      }
+    }
+  },
+
+  "group": {
+    "title": "Team",
+    "paragraph": "Learn programming with professionals with international experience",
+    "cards": {
+      "person1": {
+        "name": "Azimjon Pulatov",
+        "position": "Software Engineer @ Google, Ex-Amazon, Ex-Facebook"
+      },
+      "person2": {
+        "name": "Muhammadyusuf Abdullaev",
+        "position": "Ex-Senior Android Developer @ CAFU, Noon & Super Unlimited Inc."
+      },
+      "person3": {
+        "name": "Mukhammadyusuf Abdurakhimov",
+        "position": "Ex-Software Engineer @ EPAM Systems & Ex-CTO & Optochka Inc."
+      },
+      "person4": {
+        "name": "Muhammadyusuf Saliev",
+        "position": "Infrastructure Engineering Intern at Toptal & Ex-Proxima"
+      }
+    }
+  },
+
+  "students": {
+    "title": "Our students",
+    "paragraph": "Find out what our students say and see their results.",
+    "linkedin": "on LinkedIn",
+    "cards": {
+      "student1": {
+        "name": "Shukhrat Mirrakhimov",
+        "position": "Backend Developer Intern @",
+        "comment": "I am delighted to announce that I will be joining TopTal as a Back-end Engineering Intern. I would like to thank my recruiter Silvana Palacios and Azimjon Pulatov for supporting me through the whole process..."
+      },
+      "student2": {
+        "name": "Mirvohid Azimov",
+        "position": "Software Engineer Intern @",
+        "comment": "I'm starting a new position as a Software Engineer Intern at Yandex! Also, my special thanks to Azimjon Pulatov and all YBKY team members for creating a pleasant community to enjoy coding!"
+      },
+      "student3": {
+        "name": "Begnazar Akhmadjonov",
+        "position": "Student Developer @",
+        "comment": "I am thrilled to announce that I have embarked on a new journey as a Student Developer at Ericsson. Additionally, I am immensely grateful to Azimjon Pulatov and Mukhammadyusuf S. for providing me with..."
+      },
+      "student4": {
+        "name": "Javokhirbek Khaydaraliev",
+        "position": "STEP Intern",
+        "comment": "I'm so excited to announce that I will be joining the Google Assistant team at Google Zürich as a STEP Intern this summer. I have always been so curious about working at Google and now I am super excited"
+      }
+    }
+  },
+
+  "faq": {
+    "title": "Did we interest you?",
+    "paragraph": "Start learning programming with professionals with international experience!",
+    "button1": "Participate",
+    "button2": "Got a question?"
+  },
+
+  "footer": {
+    "items": {
+      "home": "Home",
+      "courses": "Courses",
+      "podcast": "42Podcast",
+      "group": "Team",
+      "students": "Students",
+      "faq": "FAQ"
+    },
+    "protection": "© 2023 QIRIKKI LLC. All rights reserved.",
+    "policy": "Terms of Use Privacy Policy"
+  }
+}

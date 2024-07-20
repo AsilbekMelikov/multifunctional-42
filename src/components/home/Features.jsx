@@ -1,45 +1,45 @@
-// import { Link } from 'react-router-dom';
-
+import { useTranslation } from "react-i18next";
 import Button from "../shared/button/Button";
 
 const Features = () => {
+  const [t] = useTranslation("global");
+
   const featuresCards = [
     {
       imageUrl: "https://42.uz/home/features/interactive.svg",
       alt: "Interaction",
-      title: "Interaktiv darslar",
-      description: "O'zingizga qulay vaqtingizda dasturlashni o'rganing",
+      title: t("features.cards.interaction.title"),
+      description: t("features.cards.interaction.description"),
     },
     {
       imageUrl: "https://42.uz/home/features/books.svg",
       alt: "Books",
-      title: "Yuqori sifatdagi darslar",
-      description: " Qiziqarli darslarni 42 kun mobaynida o'rganing",
+      title: t("features.cards.books.title"),
+      description: t("features.cards.books.description"),
     },
     {
       imageUrl: "https://42.uz/home/features/mix.svg",
       alt: "Frontend and Backend",
-      title: "Kross o'rganish imkoniyati",
-      description:
-        "42 kun ichida 3 yo'nalishda dasturlash asoslarini o'rganing",
+      title: t("features.cards.full.title"),
+      description: t("features.cards.full.description"),
     },
     {
       imageUrl: "https://42.uz/home/features/backend.svg",
       alt: "Backend",
-      title: "Backend asoslari",
-      description: "Backend asoslari bilan tanishing",
+      title: t("features.cards.backend.title"),
+      description: t("features.cards.backend.description"),
     },
     {
       imageUrl: "https://42.uz/home/features/frontend.svg",
       alt: "Frontend",
-      title: "Frontend asoslari",
-      description: "Frontend asoslari bilan tanishing",
+      title: t("features.cards.frontend.title"),
+      description: t("features.cards.frontend.description"),
     },
     {
       imageUrl: "https://42.uz/home/features/mobile.svg",
       alt: "Mobile",
-      title: "Mobil dasturlash asoslari",
-      description: "Mobil dasturlash asoslari bilan tanishing",
+      title: t("features.cards.mobile.title"),
+      description: t("features.cards.mobile.description"),
     },
   ];
 
@@ -51,12 +51,10 @@ const Features = () => {
       <div className="flex flex-col items-end md:flex-row">
         <div className="flex flex-col items-start space-y-4 py-4 text-left">
           <h2 className="h2-semibold text-dark200_light800">
-            Sizni nima kutmoqda?
+            {t("features.title")}
           </h2>
           <p className="text-light500_dark600 paragraph-medium-18 max-w-[65%] text-left">
-            Interaktiv dasturlashni o&apos;rganish muhiti orqali
-            proffessionallardan dasturlash asoslarini 42 kun ichida
-            o&apos;rganing!
+            {t("features.paragraph")}
           </p>
         </div>
         <img
@@ -66,7 +64,7 @@ const Features = () => {
           alt="Features section"
           width={200}
           height={200}
-          className="relative -mb-4 "
+          className="relative -mb-4 dark:invert-[0.9] "
         />
       </div>
       <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
@@ -101,12 +99,11 @@ const Features = () => {
       </div>
       <div className="mx-auto pb-4 pt-12 text-center md:max-w-2xl">
         <p className="paragraph-medium-18 text-light500_dark600">
-          42 kundan so&apos;ng siz dasturlash asoslari bilan tanishasiz va 3
-          yo&apos;nalishdan birini tanlaysiz!
+          {t("features.subParagraph")}
         </p>
       </div>
       <div className="flex w-full justify-center py-2">
-        <Button></Button>
+        <Button> {t("features.button")}</Button>
       </div>
     </section>
   );

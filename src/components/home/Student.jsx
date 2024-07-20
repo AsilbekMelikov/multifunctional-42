@@ -6,8 +6,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useTranslation } from "react-i18next";
 
 const Student = () => {
+  const [t] = useTranslation("global");
+
   const studentsData = [
     {
       studentImageUrl:
@@ -15,15 +18,14 @@ const Student = () => {
       studentImageSrcset:
         "https://42.uz/_next/image?url=%2Fstudents%2F1580794557770.jpeg&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fstudents%2F1580794557770.jpeg&w=256&q=75 2x",
       studentImageAlt: "Shukhrat Mirrakhimov",
-      studentName: "Shukhrat Mirrakhimov",
-      studentPosition: "Backend Developer Intern @",
+      studentName: t("students.cards.student1.name"),
+      studentPosition: t("students.cards.student1.position"),
       companyImgUrl:
         "https://42.uz/_next/image?url=%2Fcompanies%2Ftoptal.png&w=128&q=75",
       companyImgSrcset:
         "https://42.uz/_next/image?url=%2Fcompanies%2Ftoptal.png&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fcompanies%2Ftoptal.png&w=256&q=75 2x",
       companyAlt: "TopTal brand",
-      comment:
-        "I am delighted to announce that I will be joining TopTal as a Back-end Engineering Intern. I would like to thank my recruiter Silvana Palacios and Azimjon Pulatov for supporting me through the whole i...",
+      comment: t("students.cards.student1.comment"),
       linkedinLink:
         "https://www.linkedin.com/posts/shux121995_internship-toptal-activity-6835889893911105536-Ojj1/?utm_source=share&utm_medium=member_desktop",
     },
@@ -33,15 +35,14 @@ const Student = () => {
       studentImageSrcset:
         "https://42.uz/_next/image?url=%2Fstudents%2F1652076819849.jpeg&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fstudents%2F1652076819849.jpeg&w=256&q=75 2x",
       studentImageAlt: "Mirvohid Azimov",
-      studentName: "Mirvohid Azimov",
-      studentPosition: "Software Engineer Intern @",
+      studentName: t("students.cards.student2.name"),
+      studentPosition: t("students.cards.student2.position"),
       companyImgUrl:
         "https://42.uz/_next/image?url=%2Fcompanies%2Fyandex.png&w=128&q=75",
       companyImgSrcset:
         'https://42.uz/_next/image?url=%2Fcompanies%2Fyandex.png&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fcompanies%2Fyandex.png&w=256&q=75 2x"',
       companyAlt: "Yandex brand",
-      comment:
-        "I'm starting a new position as a Software Engineer Intern at Yandex! Also, my special thanks to Azimjon Pulatov and all YBKY team members for creating a pleasant community to enjoy coding!",
+      comment: t("students.cards.student2.comment"),
       linkedinLink:
         "https://www.linkedin.com/posts/ugcPost-7074797410685759488-77RB/?utm_source=share&utm_medium=member_desktop",
     },
@@ -51,15 +52,14 @@ const Student = () => {
       studentImageSrcset:
         "https://42.uz/_next/image?url=%2Fstudents%2F1688940135044.jpeg&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fstudents%2F1688940135044.jpeg&w=256&q=75 2x",
       studentImageAlt: "Begnazar Akhmadjonov",
-      studentName: "Begnazar Akhmadjonov",
-      studentPosition: "Student Developer @",
+      studentName: t("students.cards.student3.name"),
+      studentPosition: t("students.cards.student3.position"),
       companyImgUrl:
         "https://42.uz/_next/image?url=%2Fcompanies%2Fericsson.png&w=128&q=75",
       companyImgSrcset:
         "https://42.uz/_next/image?url=%2Fcompanies%2Fericsson.png&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fcompanies%2Fericsson.png&w=256&q=75 2x",
       companyAlt: "Ericsson brand",
-      comment:
-        "I am thrilled to announce that I have embarked on a new journey as a Student Developer at Ericsson. Additionally, I am immensely grateful to Azimjon Pulatov and Mukhammadyusuf S. for providing me wit...",
+      comment: t("students.cards.student3.comment"),
       linkedinLink:
         "https://www.linkedin.com/posts/begnazarakh_bizyutdik-ericsson-activity-7079105208248598528-lQFc/?utm_source=share&utm_medium=member_desktop",
     },
@@ -69,15 +69,14 @@ const Student = () => {
       studentImageSrcset:
         "https://42.uz/_next/image?url=%2Fstudents%2F1688970568501.jpeg&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fstudents%2F1688970568501.jpeg&w=256&q=75 2x",
       studentImageAlt: "Javokhirbek Khaydaraliev",
-      studentName: "Javokhirbek Khaydaraliev",
-      studentPosition: "STEP Intern",
+      studentName: t("students.cards.student4.name"),
+      studentPosition: t("students.cards.student4.position"),
       companyImgUrl:
         "https://42.uz/_next/image?url=%2Fcompanies%2Fgoogle.png&w=128&q=75",
       companyImgSrcset:
         'https://42.uz/_next/image?url=%2Fcompanies%2Fgoogle.png&w=128&q=75 1x, https://42.uz/_next/image?url=%2Fcompanies%2Fgoogle.png&w=256&q=75 2x"',
       companyAlt: "Google brand",
-      comment:
-        "I'm so excited to announce that I will be joining Google Assistant team at Google Zürich as a STEP Intern this summer.I have always been so curious about working at Google and now I am super excited",
+      comment: t("students.cards.student4.comment"),
       linkedinLink:
         "https://www.linkedin.com/posts/javokhirbek-kh_coding-google-intern-activity-7038846041785307136-_APB/?utm_source=share&utm_medium=member_desktop",
     },
@@ -87,11 +86,10 @@ const Student = () => {
     <section id="students" className="pt-36">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="h2-semibold text-dark200_light800">
-          Bizning o&apos;quvchilar
+          {t("students.title")}
         </h2>
         <p className="paragraph-medium-18 text-light500_dark600">
-          O&apos;quvchilarimiz nima deydi va ularning natijalari bilan
-          tanishing.
+          {t("students.paragraph")}
         </p>
       </div>
       <img
@@ -132,7 +130,7 @@ const Student = () => {
                                 {data.studentName}
                               </h2>
                               <p className="flex flex-col items-start gap-2 md:flex-row md:items-center">
-                                <span>Student Developer @</span>
+                                <span>{data.studentPosition}</span>
                                 <img
                                   src={data.companyImgUrl}
                                   alt={data.companyAlt}
@@ -179,7 +177,7 @@ const Student = () => {
                               href={data.linkedinLink}
                               className="flex items-center gap-1"
                             >
-                              on LinkedIn
+                              {t("students.linkedin")}
                               <img
                                 src="/assets/send-icon.svg"
                                 alt="send icon"
