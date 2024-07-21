@@ -1,7 +1,25 @@
-import Button from "@/components/shared/button/Button";
+import Quiz from "@/components/my-courses/Quiz";
+import { Button } from "@/components/ui/button";
+import { questions } from "@/constants/quiz/questions";
+import { useState } from "react";
 
 const MyCoursesProfile = () => {
-  return (
+  const [showQuiz, setShowQuiz] = useState(false);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [timeCount, setTimeCount] = useState(new Date());
+  const lengthOfQuestions = questions.length;
+  const resultPercent = ((correctAnswers * 100) / lengthOfQuestions).toFixed(1);
+  const timeSeconds = Math.floor(timeCount / 1000);
+
+  const spentTime = `${Math.floor(timeSeconds / 60)}:${timeSeconds % 60}`;
+
+  return showQuiz ? (
+    <Quiz
+      setCorrectAnswers={setCorrectAnswers}
+      setShowQuiz={setShowQuiz}
+      setTimeCount={setTimeCount}
+    />
+  ) : (
     <section className="background-light700_dark500 rounded-lg p-6 shadow-md md:p-12">
       <div className="">
         <div>
@@ -59,7 +77,22 @@ const MyCoursesProfile = () => {
               </li>
             </ul>
           </div>
-          <Button>Testni boshlash</Button>
+          <Button
+            onClick={() => setShowQuiz(true)}
+            className="base-semibold btn inline-flex-center text-light800_dark300 h-11 rounded-md px-8 transition-all duration-200 ease-in-out hover:bg-opacity-90 md:py-8"
+          >
+            <img
+              alt={"ZapIcon"}
+              loading="lazy"
+              width="24"
+              height="24"
+              decoding="async"
+              className="mr-2"
+              srcSet="https://42.uz/_next/image?url=%2Fanimated%2FZapIcon-64.gif&w=32&q=75"
+              src="https://42.uz/_next/image?url=%2Fanimated%2FZapIcon-64.gif&w=32&q=75"
+            />
+            Testni boshlash
+          </Button>
         </div>
         <div>
           <hr
@@ -68,16 +101,28 @@ const MyCoursesProfile = () => {
           />
           <div className="grid grid-cols-1 gap-5 pt-6 md:grid-cols-3">
             <div className="lightest-border flex flex-col gap-2 border-r py-4">
-              <h2>Natijangiz</h2>
-              <p className="text-[30px]">-</p>
+              <h2 className="text-light500_dark600 base-semibold">
+                Natijangiz
+              </h2>
+              <p className="text-light500_dark600 text-[30px] font-semibold">
+                {correctAnswers ? `${resultPercent}%` : "-"}
+              </p>
             </div>
             <div className="lightest-border flex flex-col gap-2 border-r py-4">
-              <h2>Sarflangan vaqt</h2>
-              <p className="text-[30px]">-</p>
+              <h2 className="text-light500_dark600 base-semibold">
+                Sarflangan vaqt
+              </h2>
+              <p className="text-light500_dark600 text-[30px] font-semibold">
+                {correctAnswers ? `${spentTime}` : "-"}
+              </p>
             </div>
             <div className="flex flex-col gap-2 py-4">
-              <h2>O&apos;zlashtirilgan vaqt</h2>
-              <p className="text-[30px]">0</p>
+              <h2 className="text-light500_dark600 base-semibold">
+                To&apos;g&apos;ri javoblar soni
+              </h2>
+              <p className="text-light500_dark600 text-[30px] font-semibold">
+                {correctAnswers}
+              </p>
             </div>
           </div>
         </div>
