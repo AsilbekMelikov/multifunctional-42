@@ -159,6 +159,37 @@
           "description": "Kali Linux bilan tanishuv"
         }
       ]
+    },
+    {
+      "id": "e1996d02-b9c9-4e4b-861f-b822c13624f2",
+      "imageUrl": "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail.png&w=384q=75",
+      "imageSrcset": "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail.png&w=384&q=75 1x, https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail.png&w=640&q=75 2x",
+      "imageAlt": "Express Mobile",
+      "title": "Express Mobile",
+      "mentor": "Express Mobil dasturlash kursi",
+      "lessonCount": "13",
+      "courseUsers": [
+        {
+          "job": "Dasturlash sohasiga qiziquvchilar",
+          "description": "Dasturlash sohasiga endigina kirib kelgan va yoʻnalish tanlashga qiynalayotganlar"
+        },
+        {
+          "job": "Cybersecurity (Kiberxavfsizlik)",
+          "description": "Kiberxavfsizlik yoʻnalishiga qiziquvchilar: sayt, mobil ilovalar va boshqa tizimlarda zaif nuqtalarni topishni xohlovchilar"
+        },
+        {
+          "job": "Data Science (Maʼlumotlar tahlili)",
+          "description": "Katta hajmli maʼlumotlarni tahlil qilish uchun matematika, statistika, sunʼiy intellekt va kompyuter injiniringi sohalari tamoyillari va amaliyotini birlashtirgan koʻp tarmoqli yoʻnalishni oʻrganishni istovchilar"
+        },
+        {
+          "job": "Dizayn",
+          "description": "Sayt va dasturlarni foydalanuvchilarga qulay boʻlishini taʼminlashni xohlovchilar"
+        },
+        {
+          "job": "Boshqa soha vakillari",
+          "description": "Oʻz sohasini oʻzgartirmoqchi boʻlgan, AyTi yoʻnalishlari haqida maʼlumot olishni xohlaganlar"
+        }
+      ]
     }
   ]
 }
