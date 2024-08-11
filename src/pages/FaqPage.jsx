@@ -1,4 +1,4 @@
-import FAQ from "@/components/home/FAQ";
+import { FAQ } from "@/components/home/FAQ";
 import {
   Accordion,
   AccordionContent,
