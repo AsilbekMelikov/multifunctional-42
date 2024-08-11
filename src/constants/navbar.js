@@ -8,6 +8,10 @@ export const navigationLinks = [
     path: "/courses",
   },
   {
+    label: "navbar.items.my-courses",
+    path: "/my-courses",
+  },
+  {
     label: "navbar.items.suggestions",
     path: "/suggestions",
   },

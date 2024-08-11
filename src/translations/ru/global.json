@@ -3,6 +3,7 @@
     "items": {
       "home": "Домашняя страница",
       "courses": "Курсы",
+      "my-courses": "Мои курсы",
       "suggestions": "Наше предложение",
       "group": "Команда",
       "students": "O'quvchilar",
@@ -145,6 +146,7 @@
     "items": {
       "home": "Главная страница",
       "courses": "Курсы",
+      "my-courses": "Мои курсы",
       "podcast": "42Подкаст",
       "group": "Команда",
       "students": "Ученики",

@@ -4,15 +4,10 @@ import Theme from "./Theme";
 import { useTranslation } from "react-i18next";
 import Translation from "./Translation";
 import { navigationLinks } from "@/constants/navbar";
-import { SignedIn, SignedOut, useAuth, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () => {
   const pathname = useLocation().pathname;
-  const { isSignedIn } = useAuth();
-
-  const navLinks = isSignedIn
-    ? [...navigationLinks, { label: "Mening kurslarim", path: "my-courses" }]
-    : navigationLinks;
 
   const [t] = useTranslation("global");
 
@@ -32,7 +27,7 @@ const Navbar = () => {
             </Link>
           </div>
           <ul className="flex gap-1">
-            {navLinks.map((link) => {
+            {navigationLinks.map((link) => {
               return (
                 <Link
                   key={link.path}
@@ -48,6 +43,7 @@ const Navbar = () => {
             <SignedOut>
               <Link
                 to={"/sign-up"}
+                // eslint-disable-next-line tailwindcss/migration-from-tailwind-2
                 className="btn base-medium text-light800_dark300 inline-flex-center h-11 rounded-md px-8 transition-all duration-200 ease-in-out hover:bg-opacity-90"
               >
                 <img
@@ -61,6 +57,7 @@ const Navbar = () => {
 
             <Theme />
             <Translation />
+
             <SignedIn>
               <UserButton
                 afterSwitchSessionUrl="/"

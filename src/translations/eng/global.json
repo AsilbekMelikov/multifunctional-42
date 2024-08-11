@@ -3,6 +3,7 @@
     "items": {
       "home": "Home",
       "courses": "Courses",
+      "my-courses": "My Courses",
       "suggestions": "Our Offer",
       "group": "Team",
       "students": "Students",
@@ -145,6 +146,7 @@
     "items": {
       "home": "Home",
       "courses": "Courses",
+      "my-courses": "My Courses",
       "podcast": "42Podcast",
       "group": "Team",
       "students": "Students",

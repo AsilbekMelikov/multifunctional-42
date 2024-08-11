@@ -1,17 +1,14 @@
 // import React from "react";
 
-import useFetch from "@/hooks/useFetch";
 import { useEffect, useState } from "react";
 import Button from "../../components/shared/button/Button";
+import { courses } from "@/constants/courses/courseInfo";
 
 const Courses = () => {
   const [coursesData, setCoursesData] = useState([]);
-  const { request } = useFetch();
 
   useEffect(() => {
-    request("http://localhost:3001/courses")
-      .then((data) => setCoursesData(data))
-      .catch((error) => console.log(error));
+    setCoursesData(courses);
   }, []);
 
   return (
@@ -65,6 +62,7 @@ const Courses = () => {
                 <Button
                   notlightning={true}
                   navigation={`/courses/${data.id}`}
+                  // eslint-disable-next-line tailwindcss/migration-from-tailwind-2
                   className="base-medium btn inline-flex-center text-light800_dark300 h-11 w-full rounded-md px-8 transition-all duration-200 ease-in-out hover:bg-opacity-90"
                 >
                   Kursga o&apos;tish

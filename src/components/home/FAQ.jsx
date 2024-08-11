@@ -1,7 +1,8 @@
+/* eslint-disable tailwindcss/migration-from-tailwind-2 */
 import { useTranslation } from "react-i18next";
 import Button from "../shared/button/Button";
 
-const FAQ = () => {
+export const FAQ = () => {
   const [t] = useTranslation("global");
 
   return (
@@ -36,5 +37,3 @@ const FAQ = () => {
     </section>
   );
 };
-
-export default FAQ;

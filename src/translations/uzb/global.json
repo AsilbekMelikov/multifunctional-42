@@ -3,6 +3,7 @@
     "items": {
       "home": "Bosh sahifa",
       "courses": "Kurslar",
+      "my-courses": "Mening Kurslarim",
       "suggestions": "Taklifimiz",
       "group": "Jamoa",
       "students": "O'quvchilar",
@@ -145,6 +146,7 @@
     "items": {
       "home": "Bosh sahifa",
       "courses": "Kurslar",
+      "my-courses": "Mening Kurslarim",
       "podcast": "42Podkast",
       "group": "Jamoa",
       "students": "O'quvchilar",

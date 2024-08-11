@@ -7,7 +7,7 @@ import {
 
 const CourseContent = () => {
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="space-y-4">
         <h3 className="h3-semibold text-dark200_light800 mb-6">Kurs tarkibi</h3>
         <ul

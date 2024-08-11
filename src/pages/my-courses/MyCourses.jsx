@@ -1,21 +1,35 @@
-import useFetch from "@/hooks/useFetch";
 import { useEffect, useState } from "react";
 import Button from "@/components/shared/button/Button";
+import { useAuth } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
+import { myCourseInfo } from "@/constants/my-courses/myCoursesInfo";
 
 const MyCourses = () => {
   const [myCourseData, setMyCourseData] = useState([]);
-
-  const { request } = useFetch();
+  const { isLoaded, userId } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    request("http://localhost:3001/my-courses")
-      .then((data) => setMyCourseData(data))
-      .catch((error) => console.log(error));
-  }, []);
+    if (isLoaded && !userId) {
+      navigate("/sign-up");
+    }
+
+    // eslint-disable-next-line
+  }, [isLoaded, userId]);
+
+  useEffect(() => {
+    setMyCourseData(myCourseInfo);
+
+    // eslint-disable-next-line
+  }, [myCourseInfo]);
 
   return (
     <section id="courses" className="flex flex-col gap-5 pb-10">
-      <h2 className="h2-semibold-30 text-dark200_light800">Mening kurslarim</h2>
+      <h2 className="h2-semibold-30 text-dark200_light800">
+        {myCourseInfo.length < 1
+          ? "Kurs qo'shish uchun courses sahifasiga o'ting"
+          : "Mening kurslarim"}
+      </h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {myCourseData?.map((data) => {
           return (
@@ -64,6 +78,7 @@ const MyCourses = () => {
                 <Button
                   notlightning={true}
                   navigation={`/my-courses/${data.id}`}
+                  // eslint-disable-next-line tailwindcss/migration-from-tailwind-2
                   className="base-medium btn inline-flex-center text-light800_dark300 h-11 w-full rounded-md px-8 transition-all duration-200 ease-in-out hover:bg-opacity-90"
                 >
                   Kursga o&apos;tish

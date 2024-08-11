@@ -1,60 +1,56 @@
-import { SignedIn } from "@clerk/clerk-react";
+import { useAuth } from "@clerk/clerk-react";
 import CourseContent from "../../components/courses/CourseContent";
 import CoursePlan from "../../components/courses/CoursePlan";
 import CourseUsers from "../../components/courses/CourseUsers";
-import useFetch from "@/hooks/useFetch";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { courses } from "@/constants/courses/courseInfo";
+import { myCourseInfo } from "@/constants/my-courses/myCoursesInfo";
 
 const CourseProfile = () => {
-  const [myCoursesData, setMyCourseData] = useState([]);
   const [disableButton, setDisableButton] = useState("");
   const { id } = useParams();
+  const { isLoaded, userId } = useAuth();
+  const navigate = useNavigate();
 
-  const { request } = useFetch();
-
-  const [separateCourseData, setSeperateCourseData] = useState([]);
-
-  useEffect(() => {
-    request(`http://localhost:3001/courses/${id}`)
-      .then((data) => setSeperateCourseData(data))
-      .catch((error) => console.log(error));
-  }, []);
+  const [courseDetailData, setCourseDetailData] = useState([]);
 
   useEffect(() => {
-    request(`http://localhost:3001/my-courses`)
-      .then((data) => setMyCourseData(data))
-      .catch((error) => console.log(error));
-  }, []);
+    const courseDetailOne = courses.find((item) => item.id === id);
+    setCourseDetailData(courseDetailOne);
+  }, [id]);
 
   const handleSubmit = () => {
-    request(
-      "http://localhost:3001/my-courses",
-      "POST",
-      JSON.stringify(separateCourseData)
-    )
-      .then((response) => setDisableButton("Success"))
-      .catch((err) => console.log(err));
+    if (isLoaded && !userId) {
+      navigate("/sign-up");
+    } else {
+      myCourseInfo.push(courseDetailData);
+      setDisableButton("Success");
+    }
   };
+  console.log(myCourseInfo);
 
   return (
     <>
       <CoursePlan />
-      <CourseUsers separateCourseData={separateCourseData} />
+      <CourseUsers separateCourseData={courseDetailData} />
       <CourseContent />
-      <SignedIn>
-        <button
-          type="button"
-          onClick={handleSubmit}
-          className="base-semibold btn inline-flex-center text-light800_dark300 h-11 rounded-md px-8 transition-all duration-200 ease-in-out hover:bg-opacity-90 disabled:bg-dark-200/80 disabled:dark:bg-light-800/80 md:py-8"
-          disabled={
-            myCoursesData.find((item) => item.id === id) ||
-            disableButton === "Success"
-          }
-        >
-          Mening kurslarim qo&apos;shish
-        </button>
-      </SignedIn>
+      <Button
+        type="button"
+        onClick={handleSubmit}
+        // eslint-disable-next-line tailwindcss/migration-from-tailwind-2
+        className="base-semibold btn inline-flex-center text-light800_dark300 mb-5 h-11 rounded-md px-8 transition-all duration-200 ease-in-out hover:bg-opacity-90 disabled:bg-dark-200/80 disabled:dark:bg-light-800/80 md:py-8"
+        disabled={
+          myCourseInfo.find((item) => item.id === id) ||
+          disableButton === "Success"
+        }
+      >
+        {myCourseInfo.find((item) => item.id === id) ||
+        disableButton === "Success"
+          ? "Qo'shildi"
+          : "Mening kurslarimga qo'shish"}
+      </Button>
     </>
   );
 };
